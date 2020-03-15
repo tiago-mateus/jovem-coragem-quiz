@@ -4,59 +4,125 @@ import { Button, Text} from 'react-native-elements';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 const data = [
   {
-    question: "test9grgfhsfhshghfgdjhgjhdjsfdhgfgsgfdsgfdsgdhsgsdfasdsdgasdgdgdfgadfhfdhafhafhsfdffafsasdafsdfasfasdfas890e?",
-    item: "$2,577.51",
-    item2: "Earnings",
-    item3: "$0.14",
-    item4: "$0.14",
-    id: 0
+    id: 1,
+    questionTitle: "Quem foi o primeiro Papa da Igreja?",
+    questionType: "História da Igreja",
+    questionOne: {
+      text:"São Pedro",
+      value: true
+    },
+    questionTwo: {
+      text:"São Paulo",
+      value: false
+    },
+    questionThree:{
+      text:"Junior",
+      value: false
+    },
+    questionFour: {
+      text:"São João Paulo II",
+      value: false
+    },
+    bg: 'white'
   },
   {
-    question: "teste?",
-    item: "$2,577.51",
-    item2: "Earnings",
-    item3: "$0.14",
-    item4: "$0.14",
-      id: 1
-  },{
-  question: "test",
-  item: "$2,577.51",
-  item2: "Earnings",
-  item3: "$0.14",
-  item4: "$0.14",
-  id: 2
-},{
-  question: "te",
-  item: "$2,577.51",
-  item2: "Earnings",
-  item3: "$0.14",
-  item4: "$0.14",
-  id: 3
-}];
+    id: 2,
+    questionTitle: "Quem foi o primeiro Papa da Igreja?",
+    questionType: "História da Igreja",
+    questionOne: {
+      text:"São Pedro",
+      value: true
+    },
+    questionTwo: {
+      text:"São Paulo",
+      value: false
+    },
+    questionThree:{
+      text:"Junior",
+      value: false
+    },
+    questionFour: {
+      text:"São João Paulo II",
+      value: false
+    },
+    bg: 'white'
+  },
+  {
+    id: 3,
+    questionTitle: "Quem foimeiro Papa da Igreja?",
+    questionType: "História da Igreja",
+    questionOne: {
+      text:"São Pedro",
+      value: true
+    },
+    questionTwo: {
+      text:"São Paulo",
+      value: false
+    },
+    questionThree:{
+      text:"Junior",
+      value: false
+    },
+    questionFour: {
+      text:"São João Paulo II",
+      value: false
+    },
+    bg: 'white'
+  }];
 export default class Main extends React.Component{
-  state = {};
+
+  constructor(props){
+    super(props);
+    this.state = {
+      data: [],
+    }
+  }
+
+    componentDidMount(){
+      this.setState({data})
+    }
+
+    verificaResposta(data, value){
+      if(value){
+        data.bg = {
+          borderColor: 'green',
+          color: 'green',
+          };
+        this.setState(data);
+       
+        setTimeout(() => 
+        {
+          data.id = 0;
+          this.setState(data);
+        }, 900);
+
+      }
+    }
+
 render (){
-  const rows = data;
+const {data} = this.state;
     return (
         <View style={styles.container}>
-        {rows.map((questions, index) => ( questions.id != 0 &&
-        <View key={questions.id} style={[styles.boxQuestion, {zIndex:(rows.length- index)}]}>
+        {data.map((questions, index) => ( questions.id != 0 &&
+        <View key={questions.id} style={[styles.boxQuestion, {zIndex:(data.length- index)+1}]}>
           <View style={styles.containerQuestion}>
             <Text style={{textAlign: 'center', fontSize: 15, fontStyle: 'italic', color: 'gray', marginBottom: 5}}>
-              História da Igreja
+              {questions.questionType}
               </Text>
             <Text style={{textAlign: 'center', fontSize: 17, fontWeight: 'bold', fontStyle: 'italic'}}>
-            {questions.question}
+            {questions.questionTitle}
               </Text>
           </View>
           <View style={styles.containerButton}>
-            <Button title={questions.item} type="outline" onPress={()=>{questions.id = 0}} buttonStyle={styles.btn} titleStyle={{color: 'gray'}}/>
-            <Button title={questions.item2} type="outline" buttonStyle={styles.btn} titleStyle={{color: 'gray'}}/>
-            <Button title={questions.item3} type="outline" buttonStyle={styles.btn} titleStyle={{color: 'gray'}}/>
-            <Button title={questions.item} type="outline" buttonStyle={styles.btn} titleStyle={{color: 'gray'}}/>
+            <Button title={questions.questionOne.text} type="outline" onPress={()=>{this.verificaResposta(questions, questions.questionOne.value)}} buttonStyle={[styles.btn, questions.bg]} titleStyle={{color: 'gray'}}/>
+            <Button title={questions.questionTwo.text} type="outline" onPress={()=>{this.verificaResposta(questions, questions.questionTwo.value)}} buttonStyle={styles.btn} titleStyle={{color: 'gray'}}/>
+            <Button title={questions.questionThree.text} type="outline" onPress={()=>{this.verificaResposta(questions, questions.questionThree.value)}} buttonStyle={styles.btn} titleStyle={{color: 'gray'}}/>
+            <Button title={questions.questionFour.text} type="outline" onPress={()=>{this.verificaResposta(questions, questions.questionFour.value)}} buttonStyle={styles.btn} titleStyle={{color: 'gray'}}/>
           </View>
         </View>
+        
 ))}
+
         <View style={styles.boxQuestion2}></View>
         <View style={styles.boxQuestion3}></View>
         </View>
