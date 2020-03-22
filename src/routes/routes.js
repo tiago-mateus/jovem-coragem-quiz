@@ -3,6 +3,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 import Quiz from '../pages/Quiz';
 import Main from '../pages/Main';
+import Scores from '../pages/Scores';
 
 const Routes = createAppContainer(
     createStackNavigator({
@@ -12,7 +13,19 @@ const Routes = createAppContainer(
                 headerShown: false
             }
         },
-        Quiz
+        Quiz:{
+            screen: Quiz,
+            navigationOptions:{
+                headerShown: false
+            }
+        },
+        Scores: {
+            screen: Scores,
+            navigationOptions:{
+                headerShown: false
+            }
+        }
+        
     })
 );
 
