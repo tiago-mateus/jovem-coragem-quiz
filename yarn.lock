@@ -4284,6 +4284,13 @@ range-parser@~1.2.1:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
+react-countdown-circle-timer@^1.1.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-countdown-circle-timer/-/react-countdown-circle-timer-1.2.1.tgz#e7921a4ea9aac069dcede879bd07786557a7a82e"
+  integrity sha512-vjSbsMYzlN0/KY2eN2LHt58zqIR+V2J4q7MyCz/GqSrq0zU8bz3B+It3qb4s4bx/pl6CPIDkMqs7P31xadtIlQ==
+  dependencies:
+    use-elapsed-time "^1.1.5"
+
 react-devtools-core@^3.6.3:
   version "3.6.3"
   resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-3.6.3.tgz#977d95b684c6ad28205f0c62e1e12c5f16675814"
@@ -4306,6 +4313,11 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-i
   version "16.13.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.0.tgz#0f37c3613c34fe6b37cd7f763a0d6293ab15c527"
   integrity sha512-GFMtL0vHkiBv9HluwNZTggSn/sCyEt9n02aM0dSAjGGyqyNlAyftYm4phPxdvCigG15JreC5biwxCgTAJZ7yAA==
+
+react-native-countdown-circle@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-countdown-circle/-/react-native-countdown-circle-3.0.1.tgz#7905688ee21a37f1a6d41ea1d14a5bc5f83b2603"
+  integrity sha512-S2O2/VyV9/i6RfLkqrWBi8u5oyh/I3+7ftlet1uRlpx/REf4bCKd6CUMNeOhgsWC+Hqxr32EQ6vjOmtG0GofQA==
 
 react-native-elements@^1.2.7:
   version "1.2.7"
@@ -5177,9 +5189,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18, ua-parser-js@^0.7.19:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-es@^3.1.9:
   version "3.3.9"
@@ -5312,6 +5324,11 @@ url-parse@^1.4.4:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+use-elapsed-time@^1.1.5:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/use-elapsed-time/-/use-elapsed-time-1.2.1.tgz#5c313ea78be9750a4d7173c7bfe900ee011af730"
+  integrity sha512-dbZ3XXOPMu8KPgr+4Vwhl4XU0m84s4KSIMq+M3mmKWnZrau28YyEi0QCsf/69QznXo1535FlWL8TILWe08IrhQ==
 
 use@^3.1.0:
   version "3.1.1"
